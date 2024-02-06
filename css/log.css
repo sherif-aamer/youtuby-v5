@@ -1,0 +1,26 @@
+.history-page .remove{
+    position: absolute;
+    color: rgb(57, 56, 56);
+    cursor: pointer;
+    top: 10px;
+    left: 13px;
+}
+
+.icard-icons {
+    max-width: 768px; /* Set a max width */
+    width: 100%; /* Take up full width of parent */
+    margin: 0 auto; /* Center the container if needed */
+}
+
+.card-icons img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card .fa-play{
+    position: absolute;
+    top: 40%;
+    right: 45%;
+    color: rgb(97, 91, 91);
+    display: none;
+}

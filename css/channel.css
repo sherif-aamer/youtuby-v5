@@ -1,0 +1,11 @@
+.video-section .card:hover{
+    transform: translateY(0%);    
+}
+.social-media {
+    bottom: 20px;
+    left: 20px;
+}
+.follow{
+    bottom: 20px;
+    right: 20px;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtuby / search </title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body class="mt-5">
+  <div class="layer"></div>
+  <div id="top-menu">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark p-3" >
+        <i class="fa-solid fa-bars fa-lg" id="toggler"></i>
+
+        <b>
+          <a class="navbar-brand ms-3" href="index.html">Youtuby
+            <span class="video-icon p-1"><i class="fas fa-play-circle"></i></span>
+          </a>
+          
+        </b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-lg-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="search.html">The suggested videos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="watch.html">The recently uploaded</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link me-2" href="index.html" tabindex="0">Home</a>
+            </li>
+
+          </ul>
+          <div class="d-flex my-2 my-lg-0">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button onclick="location.href='search.html'" class="btn my-2 my-sm-0" type="submit">Search</button>
+          </div>
+            <button class="btn ms-lg-3 p-2 login" href="index.html" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Login</button>
+        </div>
+      </nav>
+    </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="email" class="col-form-label">email:</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                  <label for="password" class="col-form-label">password:</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="">Creat new account</a>
+              <a href="" class="mx-auto">Forgotten password</a>
+              <button type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar -->
+      
+      <div class="row pt-4">
+        <div id="wrap">
+          <div class="sidebar">
+            <ul class="list-group list-group-flush">
+              <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-house me-2 sidebar-icon"></i> Home
+              </a>
+              <a href="index.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-fire me-2 sidebar-icon"></i> Trend
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-hourglass me-2 sidebar-icon"></i> last video
+              </a>
+              <a href="log.html" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-clock me-2 sidebar-icon"></i> history
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-book me-2 sidebar-icon"></i> my list
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-star me-2 sidebar-icon"></i> favourite
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-globe me-2 sidebar-icon"></i> channels
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-right-to-bracket sidebar-icon"></i> Membership
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-share me-2 sidebar-icon"></i> share
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-rocket me-2 sidebar-icon"></i> most views
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-envelope me-2 sidebar-icon"></i> report
+              </a>
+              <a href="i#" class="list-group-item list-group-item-action">
+                <i class="fa-solid fa-phone me-2 sidebar-icon"></i> call us
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fa-brands fa-rocketchat me-2 sidebar-icon"></i> chat
+              </a>
+            </ul> 
+          </div>
+        </div>
+      </div>
+
+      <div class="search-header pt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              500 results
+            </div>
+            <div class="col-6">
+              <span class="float-end search-filter-icons"><i class="fa-solid fa-filter"></i>filter</span>
+            </div>
+          </div>
+
+          <div class="row mt-5 ms-5">
+            <div class="col-md-4 col-lg-3 filter-colum">
+              <div class="text-centre ">upload date</div>
+              <hr>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname">
+                <span>last hour</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname">
+                <span>last day</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname">
+                <span>last week</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname">
+                <span>last year</span>
+              </label>
+            </div>
+
+            <div class="col-md-4 col-lg-3 filter-colum">
+              <div class="text-centre">type</div>
+              <hr>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname2">
+                <span>video</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname2">
+                <span>channel</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname2">
+                <span>playlist</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname2">
+                <span>movie</span>
+              </label>
+            </div>
+
+            <div class="col-md-4 col-lg-3 filter-colum">
+              <div class="text-centre">sorted by</div>
+              <hr>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname3">
+                <span>relevance</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname3">
+                <span>date</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname3">
+                <span>views</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname3">
+                <span>rating</span>
+              </label>
+            </div>
+            
+            <div class="col-md-4 col-lg-3 filter-colum">
+              <div class="text-centre">Time</div>
+              <hr>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname4">
+                <span>short (less than 4 min)</span>
+              </label>
+              <label class="d-block">
+                <input type="checkbox" name="checkboxinputname4">
+                <span>long (more than 4 min)</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- search -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/devtools.jpg" alt="learn HTML!">
+                    <time>1:55 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn HTML!</h4>
+                  </a>
+                  <p class="card-text">How to learn HTML in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>10k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>6 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/database.jpg" alt="learn CSS!">
+                    <time>2:15 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn CSS!</h4>
+                  </a>
+                  <p class="card-text">How to learn css in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>5k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>7 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/cordova.jpg" alt="learn js!">
+                    <time>9:10 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn js!</h4>
+                  </a>
+                  <p class="card-text">How to learn js in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>7k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>3 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail//frontend.jpg" alt="learn C#!">
+                    <time>10:13</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn C#!</h4>
+                  </a>
+                  <p class="card-text">How to learn C# in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>11k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>6 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/khamsat1.png" alt="learn C++!">
+                    <time>6:05 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn C++!</h4>
+                  </a>
+                  <p class="card-text">How to learn C++ in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>10k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>6 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/khamsat2.jpg" alt="learn PAYTHON!">
+                    <time>8:12 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn PAYTHON!</h4>
+                  </a>
+                  <p class="card-text">How to learn PAYTHON in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>100k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>6 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/mostaql1.jpg" alt="learn JAVA!">
+                    <time>7:10 </time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn JAVA!</h4>
+                  </a>
+                  <p class="card-text">How to learn JAVA in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>102k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>5 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 my-3">
+            <div class="card">
+              <div class="card-horizontal d-md-flex d-block">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img class="" src="img/thumbnail/php.jpg" alt="learn PHP!">
+                    <time>10:05</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <div class="card-body p-2">
+                  <a href="watch.html">
+                    <h4 class="card-title">learn PHP!</h4>
+                  </a>
+                  <p class="card-text">How to learn PHP in two weeks </p>
+                  <small class="text-muted ">
+                    <i class="fa-solid fa-film"></i> <span>10k views</span>
+                    <i class="fa-regular fa-clock"></i> <span>6 months</span>
+                  </small>
+                  <a href="channel.html" class="channel-img">
+                    <img src="img/ch-logo.png" alt="channel-image" class="rounded-circle ms-3" width="30">
+                    <span>National GIO</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/05d111f464.js" crossorigin="anonymous"></script>
+    <script src="js/code.jquery.com_jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/cdn.jsdelivr.net_npm_popper.js@1.16.1_dist_umd_popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

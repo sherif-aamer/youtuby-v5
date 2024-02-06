@@ -1,0 +1,36 @@
+.card:hover{
+    transform: translatey(0);
+}
+
+.card .watch-icons{
+    position: absolute;
+    bottom: 20px;
+    color:  #ff6600;
+}
+
+.watch-icons i:hover{
+    cursor: pointer;
+}
+
+.watch-page #more{
+    display: none;
+}
+
+.card-inner{
+    display: none;
+}
+
+time {
+    left: 21px !important;
+}
+
+.card .fa-play {
+    right: 45% !important;
+    top: 39% !important;
+}
+
+#myBtn {
+    max-width: 844px;
+    margin-bottom: 60px !important;
+}
+

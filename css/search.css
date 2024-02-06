@@ -1,0 +1,42 @@
+.search-filter-icons{
+    cursor: pointer;
+}
+
+.search-header .filter-colum{
+    display: none;
+}
+
+input:checked+span{
+    color:  #007bff;
+}
+
+.btn {
+    color: #fafafa;
+    background-color: #ff6600;
+}
+.btn:hover {
+    color: #000000;
+    background-color: #f57f30;
+}
+    
+.icard-icons {
+    max-width: 768px; /* Set a max width */
+    width: 100%; /* Take up full width of parent */
+    margin: 0 auto; /* Center the container if needed */
+}
+
+.card-icons img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card .fa-play{
+    position: absolute;
+    top: 39%;
+    right: 43%;
+    color:  rgb(255, 86, 1);
+    display: none;
+}
+.fa-filter {
+    color: #ff6600;
+}
